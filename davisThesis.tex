@@ -11,11 +11,28 @@
 %\usepackage{bookmark}
 \usepackage[us,nodayofweek,12hr]{datetime}
 \usepackage{graphicx}
+\usepackage{epigraph}
+\setlength{\epigraphwidth}{0.75\textwidth}
+\setlength{\epigraphrule}{0pt}
+\usepackage{cancel}
+\usepackage{amsmath}
+\usepackage{makecell}
+\usepackage{lineno}
+
+%Clickable table of contents
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
 %\usepackage[square,comma,numbers,sort&compress]{natbib}
 %\usepackage{hypernat}
 % Other useful packages to try
 %\usepackage{amsmath}
-%\usepackage{amssymb}
+\usepackage{amssymb}
 %
 % Different fonts to try (uncomment only fontenc and one font at a time)
 % (you may need to install these first)
@@ -51,14 +68,14 @@
                  Dissertation/Thesis LaTeX Class File}
 %Exact title of your thesis. Indicate italics where necessary by underlining or using italics. Please capitalize the first letter of each word that would normally be capitalized in a title.
 
-\author         {First Middle Last}
+\author         {Brendan James Regnery}
 %Your full name as it appears on University records. Do not use initials.
 
-\authordegrees  {B.S. (First Institution) 2010 \\
-                 M.S. (Second Institution) 2012}
+\authordegrees  {B.S. University of Florida 2016 \\
+                 M.S. (Second Institution) 20--}
 %Indicate your previous degrees conferred.
 
-\officialmajor  {Official Name of Major}
+\officialmajor  {Physics}
 %This is your official major as it appears on your University records.
 
 \graduateprogram{Graduate Program Name}
@@ -80,8 +97,16 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\dedication{\textsl{To someone very important \ldots \\
-            a nice dedication.}}
+\dedication{\textsl{To my parents and siblings, \\
+            who taught me how to live.}
+            \bigskip
+            
+            \textsl{To Christopher Webster and Philip Martin, \\
+            who taught me to live.}
+            \bigskip
+            
+            \textsl{To the Alps, \\
+            who taught me what it means to be alive.}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -102,16 +127,17 @@
 \newcommand{\bibfont}{\singlespacing}
 % need this command to keep single spacing in the bibliography when using natbib
 
-\bibliographystyle{unsrtnat}
+
+\bibliographystyle{IEEEtran} %electrical engineers citiation style
 %many other bibliography styles are available (IEEEtran, mla, etc.). Use one appropriate for your field.
 
 \makeintropages %Processes/produces the preliminary pages
 
-\include{ucdavisthesis_example_Chap1}
-\include{ucdavisthesis_example_Chap2}
-\include{ucdavisthesis_example_Chap3}
+\include{SMChapter}
+\include{VLQChapter}
+%\include{GEMChapter}
 
-\bibliography{ucdavisthesis_example}
+\bibliography{thesisBib}
 
 % The UMI abstract uses square brackets!
 % \UMIabstract[The UMI abstract is submitted online as plain text. It no longer has a word limit or specific formatting. Therefore, the UMIabstract command is now deprecated.]
